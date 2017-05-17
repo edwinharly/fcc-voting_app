@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PollsComponent implements OnInit {
 
+  polls = [
+    {
+      pollId: 'dummyId1',
+      title: 'dummy1'
+    },
+    {
+      pollId: 'dummyId2',
+      title: 'dummy2'
+    },
+    {
+      pollId: 'dummyId2',
+      title: 'dummy2'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
