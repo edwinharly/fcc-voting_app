@@ -7,22 +7,22 @@
       <li>
         <a routerLink="/polls" routerLinkActive="active">Home</a>
       </li>
-      <li *ngIf="auth.isAuthenticated()">
+      <li *ngIf="auth.loggedIn()">
         <a routerLink="/mypolls" routerLinkActive="active">My Polls</a>
       </li>
-      <li *ngIf="auth.isAuthenticated()">
+      <li *ngIf="auth.loggedIn()">
         <a routerLink="/newpoll" routerLinkActive="active">New Poll</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li *ngIf="auth.isAuthenticated()">
+      <li *ngIf="auth.loggedIn()">
         <a href="#"><span class="glyphicon glyphicon-user"></span> username</a>
       </li>
-      <li *ngIf="auth.isAuthenticated()">
-        <button (click)="auth.login()" class="btn btn-default navbar-btn btn-margin">Sign out</button>
+      <li *ngIf="auth.loggedIn()">
+        <button (click)="auth.logout()" class="btn btn-default navbar-btn btn-margin">Sign out</button>
       </li>
-      <li *ngIf="!auth.isAuthenticated()">
-        <button (click)="auth.logout()" class="btn btn-primary navbar-btn btn-margin">Sign in</button>
+      <li *ngIf="!auth.loggedIn()">
+        <button (click)="auth.login()" class="btn btn-primary navbar-btn btn-margin">Sign in</button>
       </li>
     </ul>
   </div>

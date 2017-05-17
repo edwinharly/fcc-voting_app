@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { PollsComponent } from './polls/polls.component';
 import { MyPollsComponent } from './my-polls/my-polls.component';
 import { NotFoundComponent } from './not-found.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PollsComponent,
     MyPollsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
