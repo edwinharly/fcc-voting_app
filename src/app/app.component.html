@@ -4,14 +4,20 @@
       <a class="navbar-brand" href="#">{{ title }}</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">My Polls</a></li>
-      <li><a href="#">New Poll</a></li>
+      <li>
+        <a routerLink="/polls" routerLinkActive="active">Home</a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/mypolls" routerLinkActive="active">My Polls</a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/newpoll" routerLinkActive="active">New Poll</a>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li *ngIf="isLogin"><a href="#"><span class="glyphicon glyphicon-user"></span> username</a></li>
-      <li *ngIf="isLogin"><button class="btn btn-danger navbar-btn">Sign out</button></li>
-      <li *ngIf="!isLogin"><button class="btn btn-danger navbar-btn">Sign in</button></li>
+      <li *ngIf="isLoggedIn"><a href="#"><span class="glyphicon glyphicon-user"></span> username</a></li>
+      <li *ngIf="isLoggedIn"><button class="btn btn-danger navbar-btn">Sign out</button></li>
+      <li *ngIf="!isLoggedIn"><button class="btn btn-danger navbar-btn">Sign in</button></li>
     </ul>
   </div>
 </nav>

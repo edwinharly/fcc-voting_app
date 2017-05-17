@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Voty Vote';
-  isLogin: boolean = true;
+  isLoggedIn: boolean = true;
 }

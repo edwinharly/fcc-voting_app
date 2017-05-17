@@ -5,12 +5,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PollsComponent } from './polls/polls/polls.component';
+import { PollsComponent } from './polls/polls.component';
+import { MyPollsComponent } from './my-polls/my-polls.component';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PollsComponent
+    PollsComponent,
+    MyPollsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
