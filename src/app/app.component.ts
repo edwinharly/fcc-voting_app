@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Voty Vote';
-  isLoggedIn: boolean = true;
+  // isLoggedIn: boolean = true;
+
+  constructor(public auth: AuthService) {
+    auth.handleAuthentication();
+  }
 }
